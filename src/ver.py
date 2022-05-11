@@ -1,0 +1,7 @@
+x265 = '3.5+1'
+vspipe = 'R58'
+avisynth = '3.7'
+mkvmerge = 'v67.0.0'
+MediaInfo = '22.03'
+mp4box = '2.1'
+ver = '2.4.3'

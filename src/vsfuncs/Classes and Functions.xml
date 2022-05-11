@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<Functions>
+    <Func type="code">
+        <Name>import vs</Name>
+        <Code>import vapoursynth as vs</Code>
+    </Func>
+    <Func type="call">
+        <Name>get_outputs</Name>
+        <Code>vs.get_outputs</Code>
+    </Func>
+    <Func type="call">
+        <Name>get_output</Name>
+        <Code>vs.get_output</Code>
+        <Parameters>
+            <par type="int">
+                <name>index</name>
+                <min>0</min>
+                <max>99</max>
+                <default>0</default>
+                <force>0</force>
+            </par>
+        </Parameters>
+    </Func>
+    <Func type="call">
+        <Name>clear_output</Name>
+        <Code>vs.clear_output</Code>
+        <Parameters>
+            <par type="int">
+                <name>index</name>
+                <min>0</min>
+                <max>99</max>
+                <default>0</default>
+                <force>0</force>
+            </par>
+        </Parameters>
+    </Func>
+    <Func type="call">
+        <Name>clear_outputs</Name>
+        <Code>vs.clear_outputs</Code>
+    </Func>
+    <Class name="Core">
+        <Func type="code">
+            <Name>core</Name>
+            <Code>core = vs.core</Code>
+        </Func>
+        <Func type="assign">
+            <Name>num_threads</Name>
+            <Code>core.num_threads = </Code>
+            <Value type="int">
+                <min>0</min>
+                <max>99</max>
+            </Value>
+        </Func>
+        <Func type="code">
+            <Name>core</Name>
+            <Code>core = vs.core</Code>
+        </Func>
+        <Func type="assign">
+            <Name>max_cache_size</Name>
+            <Code>core.max_cache_size = </Code>
+            <Value type="int">
+                <min>0</min>
+                <max>99999</max>
+            </Value>
+        </Func>
+        <Func type="code">
+            <Name>plugins</Name>
+            <Code>core.plugins()</Code>
+        </Func>
+        <Func type="call">
+            <Name>get_video_format</Name>
+            <Code>core.get_video_format</Code>
+            <Parameters>
+                <par type="int">
+                    <min>0</min>
+                    <max>99</max>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+    </Class>
+    <Class name="VideoNode">
+        <Func type="code">
+            <Name>format</Name>
+            <Code>clip.format</Code>
+        </Func>
+        <Func type="code">
+            <Name>width</Name>
+            <Code>clip.width</Code>
+        </Func>
+        <Func type="code">
+            <Name>height</Name>
+            <Code>clip.height</Code>
+        </Func>
+        <Func type="code">
+            <Name>num_frames</Name>
+            <Code>clip.num_frames</Code>
+        </Func>
+        <Func type="code">
+            <Name>fps</Name>
+            <Code>clip.fps</Code>
+        </Func>
+        <Func type="code">
+            <Name>numerator</Name>
+            <Code>clip.fps.numerator</Code>
+        </Func>
+        <Func type="code">
+            <Name>denominator</Name>
+            <Code>clip.denominator</Code>
+        </Func>
+        <Func type="call">
+            <Name>get_frame</Name>
+            <Code>clip.get_frame</Code>
+            <Parameters>
+                <par type="int">
+                    <min>0</min>
+                    <max>999999</max>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>get_frame_async</Name>
+            <Code>clip.get_frame_async</Code>
+            <Parameters>
+                <par type="int">
+                    <min>0</min>
+                    <max>999999</max>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>set_output</Name>
+            <Code>clip.set_output</Code>
+            <Parameters>
+                <par type="int">
+                    <name>index</name>
+                    <min>0</min>
+                    <max>99</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+                <par type="VideoNode">
+                    <name>alpha</name>
+                    <default/>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>alt_output</name>
+                    <min>0</min>
+                    <max>99</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>output</Name>
+            <Code>clip.output</Code>
+            <Parameters>
+                <par type="file object">
+                    <name>fileobj</name>
+                    <force>1</force>
+                </par>
+                <par type="bool">
+                    <name>y4m</name>
+                    <default>False</default>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>prefetch</name>
+                    <min>-1</min>
+                    <max>99</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>frames</Name>
+            <Code>clip.frames</Code>
+            <Parameters>
+                <par type="int">
+                    <name>prefetch</name>
+                    <min>-1</min>
+                    <max>999999</max>
+                    <default/>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>backlog</name>
+                    <min>-1</min>
+                    <max>999999</max>
+                    <default/>
+                    <force>0</force>
+                </par>
+                <par type="bool">
+                    <name>close</name>
+                    <default>False</default>
+                    <force>0</force>
+                </par>
+            </Parameters>
+        </Func>
+    </Class>
+</Functions>

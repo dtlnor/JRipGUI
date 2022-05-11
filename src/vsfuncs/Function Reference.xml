@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+<Functions>
+    <Class name="General Functions">
+        <Func type="call">
+            <Name>LoadAllPlugins</Name>
+            <Code>std.LoadAllPlugins</Code>
+            <Parameters>
+                <par type="str">
+                    <name>path</name>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>LoadPlugin</Name>
+            <Code>std.LoadPlugin</Code>
+            <Parameters>
+                <par type="str">
+                    <name>path</name>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>LoadPlugin(avs)</Name>
+            <Code>avs.LoadPlugin</Code>
+            <Parameters>
+                <par type="str">
+                    <name>path</name>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>SetMaxCPU</Name>
+            <Code>std.SetMaxCPU</Code>
+            <Parameters>
+                <par type="str">
+                    <name>cpu</name>
+                    <force>1</force>
+                </par>
+            </Parameters>
+        </Func>
+    </Class>
+    <Class name="Video Functions">
+        <Func type="call">
+            <Name>AddBorders</Name>
+            <Code>clip = core.std.AddBorders</Code>
+            <Parameters>
+                <par type="VideoNode">
+                    <name>clip</name>
+                    <force>1</force>
+                </par>
+                <par type="int">
+                    <name>left</name>
+                    <min>0</min>
+                    <max>9999</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>right</name>
+                    <min>0</min>
+                    <max>9999</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>top</name>
+                    <min>0</min>
+                    <max>9999</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>bottom</name>
+                    <min>0</min>
+                    <max>9999</max>
+                    <default>0</default>
+                    <force>0</force>
+                </par>
+                <par type="list">
+                    <name>color</name>
+                    <default/>
+                    <force>0</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>AssumeFPS</Name>
+            <Code>clip = core.std.AssumeFPS</Code>
+            <Parameters>
+                <par type="VideoNode">
+                    <name>clip</name>
+                    <force>1</force>
+                </par>
+                <par type="VideoNode">
+                    <name>src</name>
+                    <default/>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>fpsnum</name>
+                    <min>0</min>
+                    <max>99999</max>
+                    <default/>
+                    <force>0</force>
+                </par>
+                <par type="int">
+                    <name>fpsden</name>
+                    <min>0</min>
+                    <max>99999</max>
+                    <default>1</default>
+                    <force>0</force>
+                </par>
+            </Parameters>
+        </Func>
+        <Func type="call">
+            <Name>AverageFrames</Name>
+            <Code>clip = core.std.AverageFrames</Code>
+        </Func>
+    </Class>
+</Functions>
