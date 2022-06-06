@@ -1,6 +1,6 @@
-from nt import cpu_count
+from psutil import cpu_count
 
-import tools.vapoursynth.vapoursynth as vs
+import vapoursynth as vs
 
 from PySide6.QtCharts import QLineSeries, QChartView, QValueAxis, QScatterSeries, QChart
 from PySide6.QtCore import QThreadPool, QRunnable, QObject, Signal, QThread, Qt

@@ -4,7 +4,7 @@ from PySide6.QtCore import QSettings, QDir, QFileInfo, QDateTime, QFile
 from PySide6.QtWidgets import QApplication, QWidget, QGraphicsDropShadowEffect, QMessageBox, QFileDialog, QSplashScreen
 from PySide6.QtGui import QIcon, QPixmap, QImage, QColor, QFont
 from enum import IntEnum
-import tools.vapoursynth.vapoursynth as vs
+import vapoursynth as vs
 from locale import getdefaultlocale
 # import vapoursynth as vs
 
