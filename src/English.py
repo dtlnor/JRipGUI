@@ -15,7 +15,7 @@ All = {
                        'level-idc': '0（auto）',
                        'log-level': ('-1.none', '0.error', '1.warning', '2.info', '3.debug', '4.full'),
                        'output-depth': ('undefined', '8', '10', '12'),
-                       'tune': ('none', 'psnr', 'ssim', 'grain', 'zero-latency', 'fast-decode', 'animation')},
+                       'tune': ('none', 'psnr', 'ssim', 'grain', 'zero-latency', 'fast-decode', 'animation', 'lp', 'vcbs', 'lp++', 'vcbs++')},
         'profileWidgetLabels': (
             'tune', 'encode mode', 'bitrate(kbps)', 'pass', 'CRF', 'QP', 'output depth', 'profile', 'level', 'ref',
             'limit-refs', 'input depth', 'width', 'height', 'input csp', 'fps', 'interlace', 'seek',

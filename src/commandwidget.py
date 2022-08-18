@@ -1,5 +1,5 @@
 import json
-from nt import cpu_count
+from os import cpu_count
 from PySide6.QtCore import QRegularExpression
 from PySide6.QtWidgets import QTabWidget, QCheckBox, QSpinBox, QSlider, QDoubleSpinBox, QTabBar, \
     QMenu, QMenuBar
@@ -42,7 +42,11 @@ class CommandWidget(QWidget):
             'grain',
             'zero-latency',
             'fast-decode',
-            'animation')
+            'animation',
+            'lp',
+            'vcbs',
+            'lp++',
+            'vcbs++')
         self.ctu = (1, 1, 0, 0, 0, 0, 0, 0, 0, 0) # 0:64, 1: 32, 2: 16
         self.min_cu_size = (1, 2, 2, 2, 2, 2, 2, 2, 2, 2) # 0:32, 1: 16, 2: 8
         self.bframes = (3, 3, 4, 4, 4, 4, 4, 8, 8, 8)
